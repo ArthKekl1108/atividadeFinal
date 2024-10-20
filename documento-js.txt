@@ -1,0 +1,38 @@
+Olá professor Alexandre Nassar de Peder, segue o documento explicando as linhas de código em JavaScript
+
+1 - document.getElementById('form-cadastro').addEventListener('submit', function(event) {
+"Está linha esta pegando um elemento do documento HTML pelo Id e colocando um EventListener que ira executar o código se o botão submit for usado"
+
+2 - event.preventDefault();
+"nesta linha método preventDefault() é chamado no objeto event para impedir que o formulário recarregue a página ou envie dados para um servidor."
+
+3 - const nome = document.getElementById('nome').value;
+"Cria uma variável com o nome 'nome' e puxa o valor de nome do formulário e armazena aqui"
+
+4 - const email = document.getElementById('email').value;
+"Assim como no anterior cria uma variável, mas com o nome 'email' e puxa o valor de email do formulário e armazena aqui"
+
+5 - const novaLinha = document.createElement('tr');
+"Nesta linha é criada uma 'table row' que será colocado os dados cadastrados no formulário" 
+
+6 - const colunaNome = document.createElement('td');
+"Cria um 'table data' para armazenar o nome colocado no formulário"
+
+7 - const colunaEmail = document.createElement('td');
+"Assim como a linha 5, cria um 'table data', mas para armazenar o email colocado no formulário"
+
+8 - colunaNome.textContent = nome;
+"Adiciona o valor cadastrado no formulário à coluna nova que armazena os nomes"
+
+9 - colunaEmail.textContent = email;
+"Assim como a linha 7, adiciona o valor cadastrado no formulário, mas à coluna nova que armazena os email"
+
+10 - novaLinha.appendChild(colunaNome);
+11 - novaLinha.appendChild(colunaEmail);
+"Nessas duas linhas de código ele adiciona as células (colunaNome e colunaEmail) à nova linha da tabela (novaLinha)"
+
+12 - document.querySelector('#tabela-cadastros tbody').appendChild(novaLinha);
+"Aqui nessa linha ele encontra a tabela no documento HTML usando o Id #tabela-cadastros tbody e adiciona a nova linha na tabela"
+
+13 - document.getElementById('form-cadastro').reset();
+"Por fim, ele usa o 'reset' para limpar os inputs do formulário para ser usado novamente"
